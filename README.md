@@ -10,7 +10,7 @@ http://aka.ms/introprog-python
 https://www.youtube.com/watch?v=3cZsjOclmoM
 https://mva.microsoft.com/en-US/training-courses/Introduction-to-Programming-with-Python-8360?l=lqhuMxFz_8904984382
 
-nstrutora: Susan Ibach Especialista técnica, Christopher Harrison Gerente de desenvolvimento de conteúdo
+Instrutora: Susan Ibach Especialista técnica, Christopher Harrison Gerente de desenvolvimento de conteúdo
 
 01 | Introdução
 Explore aplicativos na linguagem Python e crie um aplicativo "Olá Mundo" para Python no Visual Studio, à medida que aprende os benefícios de conhecer o Python. Obtenha ajuda na configuração do seu computador para que possa começar a codificar.
