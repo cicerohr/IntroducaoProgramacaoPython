@@ -1,5 +1,4 @@
-Introdução à programação com o Python
-Microsoft Virtual Academy
+Microsoft Virtual Academy | Introdução à programação com o Python
 Christopher Harrison
 Susan Ibach
 12 horas
