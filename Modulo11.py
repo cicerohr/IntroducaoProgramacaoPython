@@ -1,17 +1,5 @@
 # Modulo11.py criado por Cicero em 2018-09-26. Projeto IntroducaoProgramacaoPython.
 # 
-# você já precisou anotar algo para lembrar depois?
-# uma lista de ingredientes para comprar uma receita?
-# uma lista de convidados?
-# um número de telefone?
-
-# às vezes até os programas precisam anotar algo para que possam lembrar mais tarde
-# lembrar qual página eu estava lendo meu e-book
-# lembre-se de que tesouros eu colecionei quando fiz uma pausa do jogo
-
-# trabalhando com arquivos
-# uma das maneiras que um programa pode fazer uma anotação de algo para escrevê-lo em um arquivo
-
 # como você escreve no arquivo com código?
 # use a função open para criar e abrir um arquivo
 # my_file = open(file_name, access_mode)
@@ -45,8 +33,8 @@ file.write('Como vai?')
 
 # se você quiser imprimir na próxima linha, pense em declarações de impressão
 # lembre-se \ n?
-file.write("\nOlá!")
-file.write("\nComo vai?")
+file.write('\nOlá!')
+file.write('\nComo vai?')
 
 print('--------------------------')
 

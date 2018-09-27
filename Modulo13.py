@@ -3,139 +3,139 @@
 import datetime
 
 
-# repetition
-# one of the problems with code is you're frequently doing the same thing over and over again
-# - the same few lines of code
-# - the same tasks
-# - the same operations
+# repetição
+# um dos problemas com o código é que você está freqüentemente fazendo a mesma coisa uma e outra vez
+# - as mesmas poucas linhas de código
+# - as mesmas tarefas
+# - as mesmas operações
 
-# what is a function?
-# - a reusable section of code with a name that does something
-# - sometimes called a method
+# o que é uma função?
+# - uma seção de código reutilizável com um nome que faz alguma coisa
+# - às vezes chamado de método
 
-# you have already used functions!
+# você já usou funções!
 # - print
 # - open
 # - write
 # - close
 
-# why create functions?
-# - code reuse: you are doing the same thing over and over again
-# - simplify: functions have names to define what they do
-# - simplify: breakdown complex blocks of code
-# - easier to make changes
-# - if it's been written once, you only have to update it once
+# por que criar funções?
+# - reutilização de código: você está fazendo a mesma coisa repetidas vezes
+# - simplificar: funções possuem nomes para definir o que fazem
+# - simplificar: decompor blocos complexos de código
+# - mais fácil de fazer alterações
+# - se foi escrito uma vez, você só precisa atualizá-lo uma vez
 
-# how do we create a function?
-# use the keyword def (short for define)
-# give a name for your function
-# write the code in the body of the function
-
-
-def print_welcome():
-    print("Hello World!")
+# como criamos uma função?
+# use a palavra-chave def (abreviação de define)
+# dê um nome para sua função
+# escreva o código no corpo da função
 
 
-# how do you call a function?
-# - simply use its name
-print_welcome()
+def print_bem_vindo():
+    print('Olá mundo!')
 
 
-def print_names(list):
-    for name in list:
-        print(name)
+# como você chama uma função?
+# - simplesmente use seu nome
+print_bem_vindo()
+
+
+def print_nomes(lista):
+    for nome in lista:
+        print(nome)
     return
 
 
-# define this function
-# when someone calls this function, execute this code
+# defina esta função
+# quando alguém chama esta função, execute este código
 def main():
-    names = ["Ragnar", "Bjorn", "Olaf"]
-    # yes, you can call one function inside other function
-    print_names(names)
+    nomes = ['Ragnar', 'Bjorn', 'Olaf']
+    # sim, você pode chamar uma função dentro de outra função
+    print_nomes(nomes)
     return
 
 
-# execute the function
-# in order to do that the function must be created
+# execute a função
+# para fazer isso a função deve ser criada
 main()
 
 
-# i'd like my function to be dynamic
-# in our examples the functions we created only did one thing
-# sometimes that's exactly what we need
-# but sometimes we need some flexibility
-# create custom messages to be displayed
-# provide two numbers for a calculation
-# print to the screen, and optionally, to a file
+# gostaria que minha função fosse dinâmica
+# em nossos exemplos as funções que criamos só fizeram uma coisa
+# às vezes é exatamente isso que precisamos
+# mas às vezes precisamos de alguma flexibilidade
+# criar mensagens personalizadas para serem exibidas
+# forneça dois números para um cálculo
+# imprimir na tela e, opcionalmente, em um arquivo
 
-# what about parameters?
-# they are nothing more than variables
-# like in print, you are sending in a string as a parameter for the function print
-def alert(text):
-    print(text)
+# e quanto aos parâmetros?
+# eles não são nada mais que variáveis
+# como na impressão, você está enviando uma string como parâmetro para a função print
+def alerta(texto):
+    print(texto)
     return
 
 
-# what about multiple parameters?
-# simply add them in, separated by commas
-def display_message(greeting, name):
-    message = greeting + "," + name
-    print(message)
+# o que dizer de vários parâmetros?
+# basta adicioná-los, separados por vírgulas
+def mostra_mensagem(cumprimento, nome):
+    mensagem = cumprimento + ', ' + nome
+    print(mensagem)
     return
 
 
-display_message("Hi", "Marcio")
+mostra_mensagem('Olá', 'Marcio')
 
 
-# functions return data using the return keyword
-# specify the value or data you want to pass back after the return keyword
-# you can reuse names in different functions
-def get_message(name):
-    message = "Hello, " + name
-    return message
+# funções retornam dados usando a palavra-chave return
+# especifica o valor ou os dados que você deseja repassar após a palavra-chave return
+# você pode reutilizar nomes em diferentes funções
+def receber_mensagem(nome):
+    mensagem = 'Olá, ' + nome
+    return mensagem
 
 
-def print_message(message):
-    print(message)
+def print_mensagem(mensagem):
+    print(mensagem)
     return
 
 
-output = get_message("Christopher")
-print_message(output)
+saida = receber_mensagem('Christopher')
+print_mensagem(saida)
 
 
-# your challenge
-# create a function to simplify writing to files
-# set the function to accept parameters
-# - one for text
-# - one for the name of a file
-# add the code that will write the text out to the file
+# seu desafio
+# criar uma função para simplificar a gravação em arquivos
+# defina a função para aceitar parâmetros
+# - um para texto
+# - um para o nome de um arquivo
+# adicione o código que gravará o texto no arquivo
 
 
-def write_to_file(file_name, file_content):
-    my_file = open(file_name, 'w')
-    my_file.write(file_content)
-    my_file.close()
+def write_arquivo(nome_arquivo, conteudo_arquivo):
+    meu_arquivo = open(nome_arquivo, 'w')
+    meu_arquivo.write(conteudo_arquivo)
+    meu_arquivo.close()
 
 
-def append_to_file(file_name, file_content):
-    my_file = open(file_name, 'a')
-    my_file.write(file_content + "\n")
-    my_file.close()
+def append_arquivo(nome_arquivo, conteudo_arquivo):
+    meu_arquivo = open(nome_arquivo, 'a')
+    meu_arquivo.write(conteudo_arquivo + '\n')
+    meu_arquivo.close()
 
 
-file = "extra/13_challenge.txt"
+arquivo = 'extra/13_challenge.txt'
 
-write_to_file(file, "War for territory\nWar for territory\n")
+write_arquivo(arquivo, 'War for territory\nWar for territory\n')
 
-append_to_file(file, "Years of fighting")
-append_to_file(file, "Teaching my son")
-append_to_file(file, "To believe in that man")
+append_arquivo(arquivo, 'Years of fighting')
+append_arquivo(arquivo, 'Teaching my son')
+append_arquivo(arquivo, 'To believe in that man')
 
 
-# extra challenge
-# write a to_date() e to_char() function in the format you want
+# desafio extra
+# escreva uma função to_date () e to_char () no formato que você quer
 
 
 def to_date(date):
@@ -143,8 +143,8 @@ def to_date(date):
 
 
 def to_char(date):
-    return date.strftime("%d/%m/%Y")
+    return date.strftime('%d/%m/%Y')
 
 
-dat_date = to_date("31/07/2018")
+dat_date = to_date('31/07/2018')
 print(to_char(dat_date))

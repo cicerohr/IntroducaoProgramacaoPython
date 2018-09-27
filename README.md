@@ -8,9 +8,9 @@ Disponível em:
 http://aka.ms/intropythoncode
 http://aka.ms/introprog-python
 https://www.youtube.com/watch?v=3cZsjOclmoM
-https://mva.microsoft.com/en-US/training-courses/Introduction-to-Programming-with-Python-8360?l=lqhuMxFz_8904984382
+https://mva.microsoft.com/pt-BR/training-courses/Introduction-to-Programming-with-Python-8360?l=jgABDjP8_1004984382
 
-nstrutora: Susan Ibach Especialista técnica, Christopher Harrison Gerente de desenvolvimento de conteúdo
+Instrutores: Susan Ibach Especialista técnica, Christopher Harrison Gerente de desenvolvimento de conteúdo
 
 01 | Introdução
 Explore aplicativos na linguagem Python e crie um aplicativo "Olá Mundo" para Python no Visual Studio, à medida que aprende os benefícios de conhecer o Python. Obtenha ajuda na configuração do seu computador para que possa começar a codificar.
@@ -66,7 +66,7 @@ Aprender
 03 | Variáveis de cadeia de caracteres
 04 | Armazenamento de números
 05 | Como trabalhar com datas e horas
-06 |Tomada de decisões com o código
+06 | Tomada de decisões com o código
 07 | Decisões complexas com o código
 08 | Repetição de eventos
 09 | Repetição de eventos até a conclusão

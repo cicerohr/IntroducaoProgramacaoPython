@@ -1,123 +1,123 @@
 # Modulo14.py criado por Cicero em 2018-09-26. Projeto IntroducaoProgramacaoPython.
-# 
-# syntax errors are errors that the development tool can detect
-# but sometimes typing mistakes can't be detected until you run the program
-
-# logic errors are syntactically correct, but the program doesn't do what we want it to do
-salary = "5000"
-bonus = "500"
-paycheck = salary + bonus
-print(paycheck)
-
-# runtime errors occur when the code basically works but something out of the ordinary crashes the code
-# you write a calculator program and a user tries to divide a number by zero
-# your program tries to read a file, and the file is missing
-# your program is trying to perform a date calculation and the date provided is in the wrong format
-
-# having your code crash is a very poor experience for the user
-
-# let's create a calculator program that will take two numbers and divide them for the user
-first = input("Enter the first number: ")
-second = input("Enter the second number: ")
-
-first_number = float(first)
-second_number = float(second)
-
-try:
-    result = first_number / second_number
-    print("{0:.2f} / {1:.2f} = {2:.2f}".format(first_number, second_number, result))
-except:
-    print("Sorry, but something went wrong")
-finally:
-    print("I will always run. I'm useful for close the the database or text file")
-    print("It is gaaranteed that it will run, even if you run a sys.exit()")
-
-# now try to divide by zero
-# a-ha! it crashed
-# ZeroDivisionError: float division by zero
-
-# you can add try/except around the code that generates the error to handle it gracefully
-
-# if you want to know what the error was, you can use the function sys.exc_info()
+#
 import sys
 
-first_number = 3
-second_number = 0
+# erros de sintaxe são erros que a ferramenta de desenvolvimento pode detectar
+# mas às vezes erros de digitação não podem ser detectados até que você execute o programa
+
+# erros lógicos estão sintaticamente corretos, mas o programa não faz o que queremos fazer
+salario = '5000'
+bonus = '500'
+salario_bruto = salario + bonus
+print(salario_bruto)
+
+# erros de runtime ocorrem quando o código basicamente funciona, mas algo fora do comum trava o código
+# você escreve um programa de calculadora e um usuário tenta dividir um número por zero
+# seu programa tenta ler um arquivo e o arquivo está faltando
+# seu programa está tentando executar um cálculo de data e a data fornecida está no formato errado
+
+# a quebra do código é uma experiência muito ruim para o usuário
+
+# vamos criar um programa de calculadora que pegue dois números e os divida para o usuário
+primeiro = input('Digite o primeiro número: ')
+segundo = input('Digite o segundo número: ')
+
+primeiro_numero = float(primeiro)
+segundo_numero = float(segundo)
 
 try:
-    result = first_number / second_number
-    print("{0:.2f} / {1:.2f} = {2:.2f}".format(first_number, second_number, result))
+    resultado = primeiro_numero / segundo_numero
+    print(f'{primeiro_numero:.2f} / {segundo_numero:.2f} = {resultado:.2f}')
 except:
-    error = sys.exc_info()[0]
-    print("Sorry, but something went wrong")
-    print(error)
+    print('Desculpe, mas algo deu errado')
+finally:
+    print('Eu sempre rodarei. Eu sou útil para fechar o banco de dados ou arquivo de texto')
+    print('É garantido que ele será executado, mesmo se você executar um sys.exit ()')
 
-# after you got the name of the error, you might show the user a specific messagem
-first_number = 3
-second_number = 0
+# agora tente dividir por zero
+# a-ha! isso quebrou
+# ZeroDivisionError: divisão decimal por zero
+
+# você pode adicionar try/except em torno do código que gera o erro para lidar com isso graciosamente
+
+# se você quiser saber qual foi o erro, você pode usar a função sys.exc_info ()
+
+primeiro_numero = 3
+segundo_numero = 0
 
 try:
-    result = first_number / second_number
-    print("{0:.2f} / {1:.2f} = {2:.2f}".format(first_number, second_number, result))
-except ZeroDivisionError:
-    print("Sorry, but you can't divide by zero")
+    resultado = primeiro_numero / segundo_numero
+    print(f'{primeiro_numero:.2f} / {segundo_numero:.2f} = {resultado:.2f}')
+except:
+    erro = sys.exc_info()[0]
+    print('Desculpe, mas algo deu errado')
+    print(erro)
 
-# how can i force my program to exit if an error occurs and i don't want to continue?
-# you can use the function sys.exit() in the sys library
+# depois de obter o nome do erro, você pode mostrar ao usuário uma mensagem específica
+primeiro_numero = 3
+segundo_numero = 0
+
 try:
-    result = first_number / second_number
-    print("{0:.2f} / {1:.2f} = {2:.2f}".format(first_number, second_number, result))
+    resultado = primeiro_numero / segundo_numero
+    print(f'{primeiro_numero:.2f} / {segundo_numero:.2f} = {resultado:.2f}')
 except ZeroDivisionError:
-    print("Sorry, but you can't divide by zero")
+    print('Desculpe, mas você não pode dividir por zero')
+
+# como posso forçar meu programa a sair se ocorrer um erro e não quiser continuar?
+# você pode usar a função sys.exit () na biblioteca sys
+try:
+    resultado = primeiro_numero / segundo_numero
+    print(f'{primeiro_numero:.2f} / {segundo_numero:.2f} = {resultado:.2f}')
+except ZeroDivisionError:
+    print('Desculpe, mas você não pode dividir por zero')
     # sys.exit()
-print("Hey! I'll never run!")
+print("Ei! Eu nunca vou rodar!")
 
-# you can also use variables and an if statement to control what happens after an error
-error = False
+# você também pode usar variáveis ​​e uma instrução if para controlar o que acontece depois de um erro
+erro = False
 try:
-    result = first_number / second_number
-    error = False
+    resultado = primeiro_numero / segundo_numero
+    erro = False
 except ZeroDivisionError:
-    error = True
+    erro = True
 
-if not error:
-    print("{0:.2f} / {1:.2f} = {2:.2f}".format(first_number, second_number, result))
+if not erro:
+    print(f'{primeiro_numero:.2f} / {segundo_numero:.2f} = {resultado:.2f}')
 
-# there are a lot of different situations that can raise errors in our code
-# converting between data types
-# opening files
-# mathematical calculations
-# trying to access a value in a list that does not exist
+# existem muitas situações diferentes que podem causar erros no nosso código
+# convertendo entre tipos de dados
+# abrindo arquivos
+# cálculos matemáticos
+# tentando acessar um valor em uma lista que não existe
 
-# how do you know what errors will be raised?
-# you can test it yourself and when an error occurs use the sys.exc_info() function to get the name of the error
+# como você sabe quais erros serão levantados?
+# você pode testá-lo e quando ocorre um erro use a função sys.exc_info () para obter o nome do erro
 
-# but the most important thing to do is test!
-# 1. execute your code with everything running normally
-# 2. execute your code with incorrect user input
-#   - enter letters instead of numbers
-#   - enter 0 or spaces
-#   - enter a value in the wrong format (e.g. dates)
-# 3. try other error scenarios such as missing files
-# 4. try anything you can think of that might crash your code
-#   - entering really big numbers
-#   - negative numbers
+# mas a coisa mais importante a fazer é testar!
+# 1. executar seu código com tudo funcionando normalmente
+# 2. executar seu código com entrada incorreta do usuário
+# - digite letras em vez de números
+# - insira 0 ou espaços
+# - insira um valor no formato errado (por exemplo, datas)
+# 3. tente outros cenários de erro, como arquivos ausentes
+# 4. tentar qualquer coisa que você pode pensar que pode falhar seu código
+# - inserindo números realmente grandes
+# - números negativos
 
-# do i need to handle every possible error?
-# - sometimes writing the code to handle the errors takes more time than writing the original program
-# - whether it is necessary to handle every possible error depends on how the code will be used
-# - if you are writing a system for air traffic control i would want very thorough error handling
+# eu preciso lidar com todos os erros possíveis? - às vezes escrever o código para lidar com os erros leva mais tempo
+# do que escrever o programa original - se é necessário lidar com todos os erros possíveis depende de como o código
+# será usado - se você está escrevendo um sistema para controle de tráfego aéreo, eu gostaria de um tratamento de
+# erros muito completo
 
-# your challenge
-# write code to open and read a file
-# allow the user to specify the file name
-# add error handling to provide a suitable error message if the file specified by the user could not be found
-path_name = "extra/"
-file_name = input("Type the name of the file you want to read: ")
+# seu desafio escrever código para abrir e ler um arquivo permite que o usuário especifique o nome do arquivo
+# adicione tratamento de erros para fornecer uma mensagem de erro adequada se o arquivo especificado pelo usuário não
+# puder ser encontrado
+caminho = 'extra/'
+nome_arquivo = input('Digite o nome do arquivo que você deseja ler: ')
 
 try:
-    my_file = open(path_name + file_name, "r")
-    print(my_file.read())
-    my_file.close()
+    meu_arquivo = open(caminho + nome_arquivo, "r")
+    print(meu_arquivo.read())
+    meu_arquivo.close()
 except FileNotFoundError as e:
-    print("File not found!")
+    print('Arquivo não encontrado!')
